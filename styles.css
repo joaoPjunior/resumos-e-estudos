@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --ink: #1e293b;
+    --muted: #64748b;
+    --paper: #ffffff;
+    --background: #f5f7fb;
+    --accent: #2563eb;
+    --accent-soft: #dbeafe;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef4ff 0%, var(--background) 48%, #f8fafc 100%);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    padding: 4.5rem 1.5rem 5.5rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(120deg, #0f3b8d, #2563eb 55%, #38bdf8);
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    letter-spacing: -0.045em;
+    text-shadow: 0 2px 16px rgb(15 23 42 / 20%);
+}
+
+main {
+    width: min(920px, calc(100% - 2rem));
+    margin: -2.5rem auto 4rem;
+}
+
+section {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 2rem clamp(1.25rem, 4vw, 3rem);
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid rgb(148 163 184 / 20%);
+    border-radius: 18px;
+    box-shadow: 0 14px 36px rgb(15 23 42 / 8%);
+}
+
+section::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    content: "";
+    background: linear-gradient(var(--accent), #38bdf8);
+}
+
+h2 {
+    margin: 0 0 1rem;
+    color: #123b82;
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    line-height: 1.25;
+}
+
+p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+section:nth-of-type(2) p,
+section:nth-of-type(3) p {
+    padding: 1.15rem 1.25rem;
+    overflow-x: auto;
+    color: #334155;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 3.25rem 1.25rem 4.25rem;
+    }
+
+    main {
+        width: min(100% - 1.25rem, 920px);
+        margin-top: -1.8rem;
+    }
+
+    section {
+        padding: 1.35rem 1.2rem 1.35rem 1.45rem;
+        border-radius: 13px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
