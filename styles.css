@@ -22,6 +22,46 @@ body {
     line-height: 1.7;
 }
 
+.pagina-principal {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 1.25rem;
+    width: min(600px, calc(100% - 2rem));
+    min-height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pagina-principal h1 {
+    margin: 0;
+    color: #123b82;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.pagina-principal p {
+    max-width: 38rem;
+}
+
+.botao-resumo {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    background: linear-gradient(120deg, #0f3b8d, var(--accent), #38bdf8);
+    border-radius: 999px;
+    box-shadow: 0 10px 22px rgb(37 99 235 / 28%);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.botao-resumo:hover,
+.botao-resumo:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgb(37 99 235 / 36%);
+}
+
 header {
     padding: 4.5rem 1.5rem 5.5rem;
     text-align: center;
