@@ -112,6 +112,13 @@ section.resumo-meet:hover {
     transform: translateY(-3px);
 }
 
+/* Mantém as anotações adicionadas depois no mesmo padrão dos resumos. */
+section.notas-estudo:hover {
+    background: #e0f2fe;
+    border-color: #38bdf8;
+    transform: translateY(-3px);
+}
+
 section::before {
     position: absolute;
     top: 0;
