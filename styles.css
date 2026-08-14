@@ -142,7 +142,8 @@ p {
     font-size: 1.05rem;
 }
 
-.exemplo-codigo p {
+.exemplo-codigo pre {
+    margin: 1.15rem 0 0;
     padding: 1.15rem 1.25rem;
     overflow-x: auto;
     color: #334155;
@@ -152,6 +153,22 @@ p {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 10px;
+}
+
+code {
+    padding: 0.1em 0.35em;
+    color: #1e3a8a;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    background: #eff6ff;
+    border-radius: 4px;
+}
+
+.exemplo-codigo pre code {
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    background: transparent;
 }
 
 @media (max-width: 600px) {
