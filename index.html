@@ -1,146 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Resumos de JavaScript</title>
+    <title>Plano de Estudos JavaScript</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-        <h1>Meus Resumos</h1>
+        <p class="eyebrow">JavaScript · plano organizado</p>
+        <h1>Meus estudos</h1>
+        <p class="intro">Cada assunto possui sua própria página, com explicação e exemplos para revisar com calma.</p>
     </header>
 
     <main>
         <section class="resumo-semana">
-            <h2>Semana 1</h2>
-            <p>Esta semana iniciei os estudos de JavaScript no freeCodeCamp. Foram estudados atribuições, reatribuições e concatenação de strings.</p>
-            <p>No primeiro encontro também conversamos sobre GitHub Desktop, Git Bash, commits e push. Falamos ainda sobre usar ferramentas de IA como apoio ao aprendizado, sem automatizar todo o processo.</p>
+            <h2>Como usar o cronograma</h2>
+            <p>Estude uma etapa por dia. Se precisar de mais tempo, mantenha a ordem e continue no dia seguinte. Clique no tema para abrir seu arquivo de estudo.</p>
         </section>
 
-        <section class="exemplo-codigo">
-            <h2>Exemplo: console.log</h2>
-            <p>O <code>console.log()</code> exibe informações no console do navegador e ajuda a verificar se o código está funcionando.</p>
-            <pre><code>console.log("Hello, World!");</code></pre>
+        <section class="cronograma">
+            <h2>Semana 1 — Fundamentos</h2>
+            <ol class="lista-etapas">
+                <li><span>Dia 1</span><a href="estudos/01-console-log.html">console.log()</a></li>
+                <li><span>Dia 2</span><a href="estudos/02-atribuicoes-e-reatribuicoes.html">Variáveis, atribuições e reatribuições</a></li>
+                <li><span>Dia 3</span><a href="estudos/03-concatenacao-de-strings.html">Concatenação de strings</a></li>
+                <li><span>Dia 4</span><a href="estudos/04-git-e-aprendizado.html">Git, GitHub e aprendizado com IA</a></li>
+                <li><span>Dia 5</span><a href="estudos/05-revisao-semana-1.html">Revisão da semana 1</a></li>
+            </ol>
         </section>
 
-        <section class="exemplo-codigo">
-            <h2>Variáveis, atribuições e valores</h2>
-            <p>A palavra-chave <code>let</code> declara uma variável. O sinal de igual atribui um valor a ela, que pode ser exibido com <code>console.log()</code>.</p>
-            <pre><code>let nome = "João";
-console.log(nome);</code></pre>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Concatenação de strings</h2>
-            <p>A concatenação une duas ou mais strings. Neste exemplo, o operador <code>+</code> junta o nome, um espaço e o sobrenome.</p>
-            <pre><code>let firstName = "João";
-let lastName = "Silva";
-
-console.log(firstName + " " + lastName);</code></pre>
-        </section>
-
-        <section class="resumo-meet">
-            <h2>Resumo do último encontro</h2>
-            <p>Durante o último encontro, discutimos os avanços nos estudos de JavaScript, boas práticas e o hábito de registrar as mudanças feitas por meio de commits.</p>
-        </section>
-
-        <section class="resumo-semana">
-            <h2>Semana 2</h2>
-            <p>Nesta semana continuamos os estudos de JavaScript, com revisão de funções, tipos de dados, <code>typeof</code>, números, strings e valores booleanos.</p>
-            <p>JavaScript é uma linguagem de tipagem dinâmica: o tipo de um valor pode mudar durante a execução. Em linguagens de tipagem estática, como C#, os tipos são definidos e verificados com regras mais rígidas.</p>
-            <p>Também estudamos formas de concatenar strings, incluindo o operador <code>+=</code> e template literals, que facilitam montar frases com valores de variáveis como nome, idade e sexo.</p>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Índices em strings</h2>
-            <p>Os caracteres de uma string são acessados por índices, que começam em zero. Assim, o primeiro caractere de <code>greeting</code> é <code>H</code>.</p>
-            <pre><code>let greeting = "Hello, World!";
-console.log(greeting[0]); // H</code></pre>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Último caractere de uma string</h2>
-            <p>Para acessar o último caractere, usamos o tamanho da string menos um: <code>length - 1</code>.</p>
-            <pre><code>let greeting = "Hello, World!";
-console.log(greeting[greeting.length - 1]); // !</code></pre>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Quebra de linha e caracteres especiais</h2>
-            <p>O caractere <code>\n</code> cria uma nova linha dentro de uma string. Para incluir caracteres especiais, como aspas, também é possível usar o caractere de escape <code>\</code>.</p>
-            <pre><code>let message = "O Senhor é meu Pastor\nNada me faltará";
-console.log(message);</code></pre>
-        </section>
-
-        <section class="notas-estudo">
-            <h2>Template literals</h2>
-            <p>Template literals são strings delimitadas por crases. Eles permitem incluir expressões JavaScript entre <code>${}</code>, criando textos dinâmicos.</p>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Exemplo: template literals</h2>
-            <p>O valor da variável <code>name</code> é inserido diretamente na mensagem.</p>
-            <pre><code>let name = "Alice";
-let greeting = `Olá, ${name}!`;
-
-console.log(greeting); // Olá, Alice!</code></pre>
-        </section>
-
-        <section class="notas-estudo">
-            <h2>Encontrando posições de uma substring</h2>
-            <p>O método <code>indexOf()</code> encontra a posição de uma substring dentro de uma string. Se ela não for encontrada, o resultado é <code>-1</code>.</p>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Exemplo: encontrar uma substring</h2>
-            <p>Neste caso, <code>World</code> começa no índice 7.</p>
-            <pre><code>let text = "Hello, World!";
-let position = text.indexOf("World");
-
-console.log(position); // 7</code></pre>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Exemplo: substring não encontrada</h2>
-            <p>Como <code>JavaScript</code> não está presente no texto, <code>indexOf()</code> retorna <code>-1</code>.</p>
-            <pre><code>let text = "Hello, World!";
-let position = text.indexOf("JavaScript");
-
-console.log(position); // -1</code></pre>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Exemplo: busca a partir de um índice</h2>
-            <p>O segundo argumento informa a partir de qual índice a busca deve começar.</p>
-            <pre><code>let text = "Hello, World!";
-let position = text.indexOf("o", 5);
-
-console.log(position); // 8</code></pre>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Métodos charAt() e charCodeAt()</h2>
-            <p><code>charAt()</code> retorna o caractere de uma posição específica. Já <code>charCodeAt()</code> retorna seu código Unicode.</p>
-            <pre><code>let str = "Hello";
-
-console.log(str.charAt(1)); // e
-console.log(str.charCodeAt(1)); // 101</code></pre>
-            <p>No índice 1 está o caractere <code>e</code>, cujo código Unicode é <code>101</code>.</p>
-        </section>
-
-        <section class="exemplo-codigo">
-            <h2>Diferença entre includes() e indexOf()</h2>
-            <p><code>includes()</code> retorna <code>true</code> ou <code>false</code>, informando se a substring existe. <code>indexOf()</code> retorna o índice da primeira ocorrência ou <code>-1</code> quando ela não é encontrada.</p>
-            <pre><code>let str = "Hello, World!";
-
-console.log(str.includes("World")); // true
-console.log(str.indexOf("World")); // 7</code></pre>
-            <p>Nesse exemplo, <code>World</code> existe na string e começa no índice 7.</p>
+        <section class="cronograma">
+            <h2>Semana 2 — Strings e tipos de dados</h2>
+            <ol class="lista-etapas">
+                <li><span>Dia 6</span><a href="estudos/06-tipos-de-dados.html">Tipos de dados e typeof</a></li>
+                <li><span>Dia 7</span><a href="estudos/07-indices-em-strings.html">Índices em strings</a></li>
+                <li><span>Dia 8</span><a href="estudos/08-ultimo-caractere.html">Último caractere de uma string</a></li>
+                <li><span>Dia 9</span><a href="estudos/09-quebra-de-linha.html">Quebra de linha e caracteres especiais</a></li>
+                <li><span>Dia 10</span><a href="estudos/10-template-literals.html">Template literals</a></li>
+                <li><span>Dia 11</span><a href="estudos/11-indexof.html">Encontrando posições com indexOf()</a></li>
+                <li><span>Dia 12</span><a href="estudos/12-charat-e-charcodeat.html">charAt() e charCodeAt()</a></li>
+                <li><span>Dia 13</span><a href="estudos/13-includes-e-indexof.html">Diferença entre includes() e indexOf()</a></li>
+                <li><span>Dia 14</span><a href="estudos/14-revisao-semana-2.html">Revisão da semana 2</a></li>
+            </ol>
         </section>
     </main>
 </body>
-
 </html>
